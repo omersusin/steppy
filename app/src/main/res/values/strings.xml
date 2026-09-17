@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Steppy</string>
+    <string name="build_check_message">Steppy\n\nDerleme doğrulama sürümü\nAdım sayımı ve harita henüz eklenmedi.</string>
+</resources>
