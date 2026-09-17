@@ -5,7 +5,9 @@
     <string name="tab_map">Harita</string>
     <string name="tab_stats">İstatistik</string>
     <string name="tab_settings">Ayarlar</string>
-    <string name="summary_placeholder">Günlük özet yakında\n(adım, hedef, mesafe, kalori, süre, seri)</string>
+    <string name="summary_no_goal">Hedef belirlenmedi — Ayarlar sekmesinden hedef koyabilirsin</string>
+    <string name="summary_goal">Günlük hedef: %1$,d adım (%2$d%%)</string>
+    <string name="summary_stats">%1$.2f km • %2$d kcal</string>
     <string name="map_placeholder">Harita ve antrenman kaydı yakında\n(yürüyüş, koşu, doğa yürüyüşü, bisiklet)</string>
     <string name="stats_placeholder">Detaylı istatistikler yakında</string>
     <string name="settings_placeholder">Ayarlar yakında</string>

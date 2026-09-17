@@ -55,34 +55,12 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
 
     private companion object {
         val TABS = listOf(
-            R.string.tab_summary to SummaryFragment::class.java,
+            R.string.tab_summary to com.omersusin.steppy.summary.SummaryFragment::class.java,
             R.string.tab_map to MapFragment::class.java,
             R.string.tab_stats to StatsFragment::class.java,
             R.string.tab_settings to SettingsFragment::class.java,
         )
         const val REQUEST_ACTIVITY_RECOGNITION = 1
-    }
-}
-
-class SummaryFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val context = inflater.context
-        val padding = (24 * resources.displayMetrics.density).toInt()
-        val root = LinearLayout(context).apply {
-            orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER
-            setPadding(padding, padding, padding, padding)
-        }
-        val hint = TextView(context).apply {
-            setText(R.string.summary_placeholder)
-            gravity = Gravity.CENTER
-        }
-        root.addView(hint)
-        return root
     }
 }
 
