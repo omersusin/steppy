@@ -23,6 +23,16 @@ class SettingsStoreImpl(
         return settings.asStateFlow()
     }
 
+    override fun updateSettings(settings: Settings) {
+        sharedPreferences.edit()
+            .putString("daily_goal", settings.dailyGoal.toString())
+            .putString("step_length", settings.stepLength.toString())
+            .putString("height", settings.height.toString())
+            .putString("weight", settings.weight.toString())
+            .putString("pace", settings.pace.toString())
+            .apply()
+    }
+
     private fun parseSettings(sharedPreferences: SharedPreferences): Settings =
         sharedPreferences.run {
             Settings(

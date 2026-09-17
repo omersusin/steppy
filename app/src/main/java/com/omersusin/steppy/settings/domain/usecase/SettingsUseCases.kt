@@ -18,20 +18,23 @@ class SettingsUseCases(
     fun getSettings(): Flow<Settings> = settingsRepository.getSettings()
 
     suspend fun updateSettings(settings: Settings) {
+        settingsRepository.updateSettings(settings)
+
         val today = LocalDate.now()
         val existing = dayRepository.getDay(today).firstOrNull()
-        val daySettings = DaySettings(
-            date = today,
-            goal = settings.dailyGoal,
-            height = settings.height,
-            weight = settings.weight,
-            stepLength = settings.stepLength,
-            pace = settings.pace
-        )
         if (existing == null) {
             dayRepository.upsertDay(Day.of(today, settings, steps = 0))
         } else {
-            dayRepository.updateDaySettings(daySettings)
+            dayRepository.updateDaySettings(
+                DaySettings(
+                    date = today,
+                    goal = settings.dailyGoal,
+                    height = settings.height,
+                    weight = settings.weight,
+                    stepLength = settings.stepLength,
+                    pace = settings.pace,
+                )
+            )
         }
     }
 }

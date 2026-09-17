@@ -58,7 +58,7 @@ class MainActivity : androidx.appcompat.app.AppCompatActivity() {
             R.string.tab_summary to com.omersusin.steppy.summary.SummaryFragment::class.java,
             R.string.tab_map to MapFragment::class.java,
             R.string.tab_stats to StatsFragment::class.java,
-            R.string.tab_settings to SettingsFragment::class.java,
+            R.string.tab_settings to com.omersusin.steppy.settings.SettingsFragment::class.java,
         )
         const val REQUEST_ACTIVITY_RECOGNITION = 1
     }
@@ -85,19 +85,6 @@ class StatsFragment : Fragment() {
     ): View {
         return TextView(inflater.context).apply {
             setText(R.string.stats_placeholder)
-            gravity = Gravity.CENTER
-        }
-    }
-}
-
-class SettingsFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return TextView(inflater.context).apply {
-            setText(R.string.settings_placeholder)
             gravity = Gravity.CENTER
         }
     }

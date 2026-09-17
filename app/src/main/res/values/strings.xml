@@ -10,7 +10,12 @@
     <string name="summary_stats">%1$.2f km • %2$d kcal</string>
     <string name="map_placeholder">Harita ve antrenman kaydı yakında\n(yürüyüş, koşu, doğa yürüyüşü, bisiklet)</string>
     <string name="stats_placeholder">Detaylı istatistikler yakında</string>
-    <string name="settings_placeholder">Ayarlar yakında</string>
+    <string name="settings_daily_goal">Günlük adım hedefi</string>
+    <string name="settings_step_length">Adım boyu (cm)</string>
+    <string name="settings_height">Boy (cm)</string>
+    <string name="settings_weight">Kilo (kg)</string>
+    <string name="settings_save">Kaydet</string>
+    <string name="settings_saved">Kaydedildi ✓</string>
 
     <string name="step_counter_channel">Adım sayıcı</string>
     <plurals name="step_count">

@@ -6,4 +6,6 @@ import kotlinx.coroutines.flow.Flow
 interface SettingsStore {
 
     fun getSettings(): Flow<Settings>
+
+    fun updateSettings(settings: Settings)
 }
