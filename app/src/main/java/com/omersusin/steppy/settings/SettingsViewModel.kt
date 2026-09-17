@@ -41,7 +41,7 @@ class SettingsViewModel(application: SteppyApplication) : ViewModel() {
                 height = settings.height,
                 weight = settings.weight,
                 pace = settings.pace,
-                saved = saved,
+                saved = isSaved,
             )
         }
             .stateIn(
