@@ -8,26 +8,19 @@ import android.widget.TextView
 class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val basePadding = (24 * resources.displayMetrics.density).toInt()
         setContentView(TextView(this).apply {
             setText(R.string.build_check_message)
             textSize = 20f
             gravity = Gravity.CENTER
-            val padding = (24 * resources.displayMetrics.density).toInt()
-            setPadding(padding, padding, padding, padding)
+            setPadding(basePadding, basePadding, basePadding, basePadding)
             setOnApplyWindowInsetsListener { view, insets ->
-                val bars = if (android.os.Build.VERSION.SDK_INT >= 30) {
-                    insets.getInsets(android.view.WindowInsets.Type.systemBars())
-                } else {
-                    null
-                }
-                if (bars != null) {
-                    view.setPadding(
-                        padding + bars.left,
-                        padding + bars.top,
-                        padding + bars.right,
-                        padding + bars.bottom,
-                    )
-                }
+                view.setPadding(
+                    basePadding + insets.systemWindowInsetLeft,
+                    basePadding + insets.systemWindowInsetTop,
+                    basePadding + insets.systemWindowInsetRight,
+                    basePadding + insets.systemWindowInsetBottom,
+                )
                 insets
             }
         })
