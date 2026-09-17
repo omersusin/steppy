@@ -114,8 +114,6 @@ class StepCounterService : LifecycleService(), SensorEventListener {
         sensorManager.unregisterListener(this)
     }
 
-    override fun onBind(intent: Intent?): IBinder? = super.onBind(intent)
-
     @RequiresApi(VERSION_CODES.O)
     private fun createNotificationChannel(): NotificationChannel {
         val name = getString(R.string.step_counter_channel)

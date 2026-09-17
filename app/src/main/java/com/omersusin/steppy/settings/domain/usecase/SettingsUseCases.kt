@@ -7,6 +7,7 @@ import com.omersusin.steppy.core.domain.repository.DayRepository
 import com.omersusin.steppy.settings.domain.model.Settings
 import com.omersusin.steppy.settings.domain.repository.SettingsRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.firstOrNull
 import java.time.LocalDate
 
 class SettingsUseCases(
